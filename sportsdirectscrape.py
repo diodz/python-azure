@@ -8,13 +8,13 @@ from io import StringIO
 from slugify import slugify
 from scrapingant_client import ScrapingAntClient
 import os
-from dotenv import load_dotenv
 # Import Azure Blob Storage libraries
 from azure.storage.blob.aio import BlobServiceClient, ContainerClient, BlobClient
 from azure.core.exceptions import ResourceExistsError, ResourceNotFoundError
 
+logging.info('Imported libraries in scraper')
 # ScrapingAnt API details set in azure settings 
-SCRAPINGANT_API_KEY = os.getenv("SCRAPINGANT_API_KEY")#"563c23070e6e4d6ea38beedb892e0d7f"
+SCRAPINGANT_API_KEY = os.getenv("SCRAPINGANT_API_KEY")
 
 # Root URL
 ROOT_URL = "https://www.sportsdirect.com/football/all-football"
@@ -132,8 +132,8 @@ async def identify_all_products(client):
 
     all_products = {}
     for page, url in page_urls.items():
-        if page == 2:
-            break
+        # if page == 2:
+        #     break
         logging.info(f"Processing page {page}: {url}")
         products = await get_page_products(url, client)
         if products:

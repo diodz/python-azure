@@ -3,10 +3,12 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
-aiohttp==3.8.5
-beautifulsoup4==4.12.2
-python-slugify==8.0.1
-lxml==4.9.3
-scrapingant-client==2.1.0
-httpx
+urllib3
+asyncio
+lxml
+python-slugify
+scrapingant-client[async]
 azure-storage-blob
+azure-core
+aiohttp
+httpx
