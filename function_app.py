@@ -4,7 +4,7 @@ import sys
 #sys.path.append(r'C:\Users\diego\OneDrive\Escritorio\Github\python-azure\.venv\Lib\site-packages')
 
 logging.info(sys.path)
-from sportsdirectscrape import main
+#from sportsdirectscrape import main
 import asyncio
 app = func.FunctionApp()
 
