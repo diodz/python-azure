@@ -2,8 +2,8 @@ import os
 import urllib.parse
 import asyncio
 import logging
-from lxml import etree
 from datetime import datetime
+from lxml import etree
 from io import StringIO
 from slugify import slugify
 from scrapingant_client import ScrapingAntClient
